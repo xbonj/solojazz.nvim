@@ -198,7 +198,17 @@ function M.setup()
 
     -- Lazy
     LazyH1 = { fg = c.white, bg = c.teal_1, bold = true },
-    LazyH2 = { fg = c.pink }
+    LazyH2 = { fg = c.pink },
+
+    -- Mason
+    MasonHeader = { fg = c.teal_1 },
+    MasonHeaderSecondary = { fg = c.teal_1 },
+    MasonHeading = { fg = c.pink },
+    MasonHighlightBlockBold = { fg = c.white, bg = c.teal_1 },
+    MasonHighlightBlockBoldSecondary = { fg = c.white, bg = c.teal_1 },
+    MasonHighlightSecondary = { fg = c.pink },
+    MasonMuted = { fg = c.green },
+    MasonMutedBlock = { fg = c.purple, bg = c.azure }
   }
 
   -- Terminal colors
