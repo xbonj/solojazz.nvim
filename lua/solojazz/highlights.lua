@@ -5,7 +5,7 @@ local M = {}
 function M.setup()
   local highligths = {
     ColorColumn = { bg = c.azure },
-    Conceal = { fg = c.white, bg = c.diff_added },
+    Conceal = { fg = c.white, bg = c.green },
     CurSearch = { fg = c.purple, bg = c.honeydew, bold = true },
     Cursor = { fg = c.white, bg = c.teal_1 },
     lCursor = { fg = c.white, bg = c.teal_1 },
@@ -16,8 +16,8 @@ function M.setup()
     diffFile = { fg = c.teal_1 },
     gitDiff = { fg = c.purple },
     diffIndexLine = { fg = c.blue_1 },
-    diffOldFile = { fg = c.red },
-    diffNewFile = { fg = c.green },
+    diffOldFile = { fg = c.black, bg = c.diff_removed_highlight },
+    diffNewFile = { fg = c.black, bg = c.diff_added_highlight },
     diffLine = { fg = c.slate },
     DiffAdd = { fg = c.black, bg = c.diff_added_highlight },
     diffAdded = { fg = c.black, bg = c.diff_added_highlight },
@@ -30,7 +30,8 @@ function M.setup()
     TermCursor = { fg = c.white, bg = c.teal_1 },
     TermCursorNC = { fg = c.none, bg = c.none },
     ErrorMsg = { fg = c.red, bold = true },
-    --WinSeparator = {  },
+    WinSeparator = { fg = c.teal_1 },
+    FloatBorder = { fg = c.teal_1 },
     Folded = { bg = c.lavender },
     FoldColumn = { bg = c.white },
     SignColumn = { bg = c.white },
@@ -46,7 +47,7 @@ function M.setup()
     ModeMsg = { fg = c.teal_1, bold = true },
     --MsgArea
     --MsgSeparator
-    --MoreMsg
+    MoreMsg = { fg = c.green, bold = true },
     NonText = { fg = c.slate },
     Normal = { fg = c.purple, bg = c.white },
     NormalFloat = { bg = c.white_2 },
@@ -59,7 +60,7 @@ function M.setup()
     --Question
     --QuickFixLine
     Search = { fg = c.purple, bg = c.rose, bold = true },
-    --SpecialKey
+    SpecialKey = { fg = c.pink },
     --SpellBad
     --SpellCap
     --SpellLocal
@@ -78,7 +79,7 @@ function M.setup()
     --WinBar
     --WinBarNC
     VertSplit = { fg = c.slate },
-    healthError = { fg = c.red },
+    healthError = { fg = c.red, bold = true },
     healthSuccess = { fg = c.green },
     healthWarning = { fg = c.orange },
     helpNote = { fg = c.white, bg = c.teal_1 },
@@ -86,7 +87,7 @@ function M.setup()
     String = { fg = c.blue_1 },
     Character = { fg = c.blue_1 },
     Number = { fg = c.orange },
-    Boolean = { fg = c.teal },
+    Boolean = { fg = c.teal, bold = true },
     Float = { fg = c.blue },
     Identifier = { fg = c.teal },
     Constant = { fg = c.orange },
@@ -103,8 +104,10 @@ function M.setup()
     Type = { fg = c.teal },
     Special = { fg = c.teal_1 },
     SpecialChar = { fg = c.purple },
-    Error = { fg = c.red },
+    Error = { fg = c.red, bold = true },
     cssBraces = { fg = c.purple },
+
+    helpSectionDelim = { bold = true },
 
     -- Treesitter
     --['@constant'] = { fg = c.orange },
@@ -211,6 +214,10 @@ function M.setup()
   vim.g.terminal_color_13 = c.violet
   vim.g.terminal_color_14 = c.teal_1
   vim.g.terminal_color_15 = c.slate
+
+  -- Apply cursor highlights
+  vim.cmd([[set guicursor=n-v-c:block-Cursor,i-ci-ve:ver100-Cursor,r-cr:hor20,o:hor50-Cursor,sm:block-Cursor]])
+
 
   return highligths
 end
