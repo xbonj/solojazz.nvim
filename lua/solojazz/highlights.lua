@@ -195,6 +195,10 @@ function M.setup()
     IndentBlanklineChar = { fg = c.grey },
     IndentBlanklineContextChar = { fg = c.teal_1 },
     IndentBlanklineContextStart = { bg = c.azure },
+
+    -- Lazy
+    LazyH1 = { fg = c.white, bg = c.teal_1, bold = true },
+    LazyH2 = { fg = c.pink }
   }
 
   -- Terminal colors
