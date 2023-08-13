@@ -25,6 +25,9 @@ function M.setup()
     diffChanged = { fg = c.black, bg = c.diff_changed_highlight },
     DiffDelete = { fg = c.black, bg = c.diff_removed_highlight },
     diffRemoved = { fg = c.black, bg = c.diff_removed_highlight },
+    gitSignsAdd = { fg = c.green },
+    gitSignsChange = { fg = c.orange },
+    gitSignsDelete = { fg = c.red },
     --DiffText = { bg = c. },
     EndOfBuffer = { fg = c.slate },
     TermCursor = { fg = c.white, bg = c.teal_1 },
@@ -208,7 +211,39 @@ function M.setup()
     MasonHighlightBlockBoldSecondary = { fg = c.white, bg = c.teal_1 },
     MasonHighlightSecondary = { fg = c.pink },
     MasonMuted = { fg = c.green },
-    MasonMutedBlock = { fg = c.purple, bg = c.azure }
+    MasonMutedBlock = { fg = c.purple, bg = c.azure },
+
+    -- Navic
+    NavicIconsFile = { fg = c.teal, bg = c.white_2 },
+    NavicIconsModule = { fg = c.yellow, bg = c.white_2 },
+    NavicIconsNamespace = { fg = c.teal, bg = c.white_2 },
+    NavicIconsPackage = { fg = c.teal, bg = c.white_2 },
+    NavicIconsClass = { fg = c.orange, bg = c.white_2 },
+    NavicIconsMethod = { fg = c.blue, bg = c.white_2 },
+    NavicIconsProperty = { fg = c.green1, bg = c.white_2 },
+    NavicIconsField = { fg = c.green1, bg = c.white_2 },
+    NavicIconsConstructor = { fg = c.orange, bg = c.white_2 },
+    NavicIconsEnum = { fg = c.orange, bg = c.white_2 },
+    NavicIconsInterface = { fg = c.orange, bg = c.white_2 },
+    NavicIconsFunction = { fg = c.blue, bg = c.white_2 },
+    NavicIconsVariable = { fg = c.magenta, bg = c.white_2 },
+    NavicIconsConstant = { fg = c.magenta, bg = c.white_2 },
+    NavicIconsString = { fg = c.green, bg = c.white_2 },
+    NavicIconsNumber = { fg = c.orange, bg = c.white_2 },
+    NavicIconsBoolean = { fg = c.orange, bg = c.white_2 },
+    NavicIconsArray = { fg = c.orange, bg = c.white_2 },
+    NavicIconsObject = { fg = c.orange, bg = c.white_2 },
+    NavicIconsKey = { fg = c.purple, bg = c.white_2 },
+    NavicIconsKeyword = { fg = c.purple, bg = c.white_2 },
+    NavicIconsNull = { fg = c.orange, bg = c.white_2 },
+    NavicIconsEnumMember = { fg = c.green1, bg = c.white_2 },
+    NavicIconsStruct = { fg = c.orange, bg = c.white_2 },
+    NavicIconsEvent = { fg = c.orange, bg = c.white_2 },
+    NavicIconsOperator = { fg = c.teal, bg = c.white_2 },
+    NavicIconsTypeParameter = { fg = c.green1, bg = c.white_2 },
+    NavicText = { fg = c.purple, bg = c.white_2 },
+    NavicSeparator = { fg = c.pink, bg = c.white_2 },
+    -- Neorg
   }
 
   -- Terminal colors
@@ -231,7 +266,6 @@ function M.setup()
 
   -- Apply cursor highlights
   vim.cmd([[set guicursor=n-v-c:block-Cursor,i-ci-ve:ver100-Cursor,r-cr:hor20,o:hor50-Cursor,sm:block-Cursor]])
-
 
   return highligths
 end
