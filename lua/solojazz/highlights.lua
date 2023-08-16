@@ -202,6 +202,7 @@ function M.setup()
     -- Lazy
     LazyH1 = { fg = c.white, bg = c.teal_1, bold = true },
     LazyH2 = { fg = c.pink },
+    LazyDimmed = { bg = c.azure },
 
     -- Mason
     MasonHeader = { fg = c.teal_1 },
@@ -243,7 +244,95 @@ function M.setup()
     NavicIconsTypeParameter = { fg = c.green1, bg = c.white_2 },
     NavicText = { fg = c.purple, bg = c.white_2 },
     NavicSeparator = { fg = c.pink, bg = c.white_2 },
+
+    -- Illuminate
+    IlluminatedWordText = { bg = c.lavender },
+    IlluminatedWordRead = { bg = c.lavender },
+    IlluminatedWordWrite = { bg = c.lavender },
+
     -- Neorg
+
+    -- Neogit
+    NeogitBranch = { fg = c.blue_1, bold = true },
+    -- NeogitRemote                Header showing current branch's remote (if set)
+    -- NeogitObjectId              Object's SHA hash
+    -- NeogitStash                 Stash name
+    -- NeogitFold = { fg = c.white, bg = c.teal_1, bold = true },
+    -- NeogitRebaseDone            Current position within rebase
+
+    NeogitSectionHeader = { fg = c.teal_1, bold = true },
+
+    NeogitChangeModified = { fg = c.orange, italic = true },
+    NeogitChangeAdded = { fg = c.green, italic = true },
+    NeogitChangeDeleted = { fg = c.red, italic = true },
+    NeogitChangeRenamed = { fg = c.pink, italic = true },
+    NeogitChangeUpdated = { fg = c.green, italic = true },
+    NeogitChangeCopied = { fg = c.blue_1, italic = true },
+    NeogitChangeBothModified = { fg = c.pink, italic = true },
+    NeogitChangeNewFile = { fg = c.purple, italic = true },
+
+    NeogitHunkHeader = { fg = c.teal_1, bg = c.azure, bold = true },
+    -- NeogitDiffContext
+    NeogitDiffAdd = { link = 'diffAdded' },
+    NeogitDiffDelete = { link = 'diffDelete' },
+    NeogitDiffHeader = { fg = c.blue_1, bold = true },
+
+    NeogitHunkHeaderHighlight = { fg = c.white, bg = c.teal_1, bold = true },
+    -- NeogitDiffContextHighlight
+    NeogitDiffAddHighlight = { link = 'diffAdded' },
+    NeogitDiffDeleteHighlight = { link = 'diffDelete' },
+    NeogitDiffHeaderHighlight = { fg = c.blue_1, bold = true },
+
+    -- NeogitCursorLine            Applies a "fake" cursorline highlight because
+    --                             signs will otherwise take precedence over normal
+    --                             CursorLine HL group
+
+    NeogitFilePath = { fg = c.blue_1, italic = true },
+    NeogitCommitViewHeader = { fg = c.white, bg = c.teal_1, bold = true },
+
+    -- LOG VIEW BUFFER
+    -- NeogitGraphRed              Used when --colors is enabled for graph
+    -- NeogitGraphOrange
+    -- NeogitGraphYellow
+    -- NeogitGraphGreen
+    -- NeogitGraphBlue
+    -- NeogitGraphPurple
+
+    -- NeogitGraphRedBold          (Same as above, but bold)
+    -- NeogitGraphOrangeBold
+    -- NeogitGraphYellowBold
+    -- NeogitGraphGreenBold
+    -- NeogitGraphBlueBold
+    -- NeogitGraphPurpleBold
+
+    -- POPUPS
+    -- NeogitPopupSectionTitle    Applied to all section headers
+    -- NeogitPopupBranchName      Applied to the current branch name for emphasis
+    -- NeogitPopupBold            Applied on "@{upstream}" and "pushRemote" for
+    --                            emphasis (but less emphasis than BranchName)
+    -- NeogitPopupSwitchKey       Applied to the key that will toggle switch
+    -- NeogitPopupSwitchEnabled   Applied to the flag if enabled
+    -- NeogitPopupSwitchDisabled  Applied to the flag if disabled
+    -- NeogitPopupOptionKey       Applied to the key that will trigger option
+    -- NeogitPopupOptionEnabled   Applied if option is set
+    -- NeogitPopupOptionDisabled  Applied if option has no value
+    -- NeogitPopupConfigKey       Applied to the key that triggers config
+    -- NeogitPopupConfigEnabled   Applied to enabled config value
+    -- NeogitPopupConfigDisabled  Applied to config without value
+    -- NeogitPopupActionKey       Applied to key that triggers function
+    -- NeogitPopupActionDisabled  Applied to key when function is unimplemented
+
+    -- NOTIFICATIONS
+    -- NeogitNotificationInfo     Linked to DiagnosticInfo by default
+    -- NeogitNotificationWarning  Linked to DiagnosticWarning by default
+    -- NeogitNotificationError    Linked to DiagnosticError by default
+
+    -- COMMAND HISTORY BUFFER
+    -- NeogitCommandText          Git command that was run
+    -- NeogitCommandTime          Execution time
+    -- NeogitCommandCodeNormal    Applied to a successful command's exit status (0)
+    -- NeogitCommandCodeError     When command exits with non-zero status
+
   }
 
   -- Terminal colors
