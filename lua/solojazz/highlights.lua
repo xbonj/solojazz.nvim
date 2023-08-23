@@ -341,15 +341,15 @@ function M.setup()
   vim.g.terminal_color_2 = c.green
   vim.g.terminal_color_3 = c.orange
   vim.g.terminal_color_4 = c.blue_1
-  vim.g.terminal_color_5 = c.purple_1
-  vim.g.terminal_color_6 = c.teal
+  vim.g.terminal_color_5 = c.pink
+  vim.g.terminal_color_6 = c.teal_1
   vim.g.terminal_color_7 = c.slate
   vim.g.terminal_color_8 = c.slate
   vim.g.terminal_color_9 = c.red
   vim.g.terminal_color_10 = c.green
   vim.g.terminal_color_11 = c.orange
   vim.g.terminal_color_12 = c.blue
-  vim.g.terminal_color_13 = c.violet
+  vim.g.terminal_color_13 = c.pink
   vim.g.terminal_color_14 = c.teal_1
   vim.g.terminal_color_15 = c.slate
 
