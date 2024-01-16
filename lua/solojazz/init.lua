@@ -3,8 +3,8 @@ local theme = require('solojazz.highlights')
 local M = {}
 
 local function highlight(highlights)
-  for group, highlight in pairs(highlights) do
-    vim.api.nvim_set_hl(0, group, highlight)
+  for group, hl in pairs(highlights) do
+    vim.api.nvim_set_hl(0, group, hl)
   end
 end
 
