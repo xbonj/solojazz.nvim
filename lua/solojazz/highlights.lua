@@ -3,7 +3,7 @@ local c = require('solojazz.colors').colors
 local M = {}
 
 function M.setup()
-  local highligths = {
+  local highlights = {
     ColorColumn = { bg = c.azure },
     Conceal = { fg = c.white, bg = c.green },
     CurSearch = { fg = c.purple, bg = c.honeydew, bold = true },
@@ -55,9 +55,9 @@ function M.setup()
     Normal = { fg = c.purple, bg = c.white },
     NormalFloat = { bg = c.white_2 },
     --NormalNC
-    Pmenu = { fg = c.teal_1, bg = c.white },
+    Pmenu = { fg = c.teal_1, bg = c.white_1 },
     --PmenuSel = { fg = c.white_2, bg = c.teal_1 },
-    PmenuSel = { bg = c.white_2 },
+    PmenuSel = { bg = c.azure },
     PmenuSbar = { fg = c.teal_1, bg = c.white_2 },
     PmenuThumb = { fg = c.teal_1, bg = c.teal_1 },
     --Question
@@ -89,7 +89,8 @@ function M.setup()
     Comment = { fg = c.slate, italic = true },
     String = { fg = c.blue_1 },
     Character = { fg = c.blue_1 },
-    Number = { fg = c.orange },
+    -- Number = { fg = c.orange },
+    Number = { fg = c.blue },
     Boolean = { fg = c.teal, bold = true },
     Float = { fg = c.blue },
     Identifier = { fg = c.teal },
@@ -106,7 +107,7 @@ function M.setup()
     PreProc = { fg = c.teal },
     Type = { fg = c.teal },
     Special = { fg = c.teal_1 },
-    SpecialChar = { fg = c.purple },
+    SpecialChar = { fg = c.blue },
     Error = { fg = c.red, bold = true },
     cssBraces = { fg = c.purple },
 
@@ -142,7 +143,7 @@ function M.setup()
     ['@text.todo.unchecked'] = { fg = c.teal },
     ['@text.uri'] = { fg = c.blue_1, underline = true },
     ['@type'] = { fg = c.blue },
-    ['@type.builtin'] = { fg = c.teal },
+    ['@type.builtin'] = { fg = c.blue },
     ['@variable'] = { fg = c.orange },
     ['@variable.builtin'] = { fg = c.pink },
 
@@ -156,7 +157,7 @@ function M.setup()
     ['@lsp.typemod.function.declaration'] = { fg = c.pink },
     ['@lsp.typemod.parameter.declaration'] = { fg = c.orange },
     ['@lsp.mod.declaration'] = { fg = c.orange },
-    ['@lsp.typemod.macro.globalScope.c'] = { fg = c.blue },
+    ['@lsp.typemod.macro.globalScope.c'] = { fg = c.teal },
     ['@lsp.typemod.class.declaration'] = { fg = c.blue },
 
     -- Nvim Tree
@@ -200,9 +201,8 @@ function M.setup()
     LspCodeLens = { bg = c.white_2 },
 
     -- Indentblankline
-    IndentBlanklineChar = { fg = c.grey },
-    IndentBlanklineContextChar = { fg = c.teal_1 },
-    IndentBlanklineContextStart = { bg = c.azure },
+    IblChar = { fg = c.grey },
+    IblScope = { bg = c.azure },
 
     -- Lazy
     LazyH1 = { fg = c.white, bg = c.teal_1, bold = true },
