@@ -1,4 +1,4 @@
-# Solo-jazz.nvim
+# Solojazz.nvim
 
 Port of [Solo Jazz Emacs theme](https://github.com/cstby/solo-jazz-emacs-theme) for Neovim.
 
