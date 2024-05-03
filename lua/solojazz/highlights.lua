@@ -163,17 +163,19 @@ function M.setup()
     ['@punctuation.special.markdown'] = { fg = c.blue_1 },
 
     -- Semantic tokens
+    ['@lsp.mod.declaration'] = { fg = c.orange },
+    ['@lsp.type.class'] = { fg = c.blue },
     ['@lsp.type.function'] = { fg = c.blue_1 },
     ['@lsp.type.method'] = { fg = c.blue },
     ['@lsp.type.parameter'] = { fg = c.orange },
     ['@lsp.type.property'] = { fg = c.blue },
     ['@lsp.type.variable'] = { fg = c.purple },
-    ['@lsp.type.class'] = { fg = c.blue },
-    ['@lsp.typemod.function.declaration'] = { fg = c.pink },
-    ['@lsp.typemod.parameter.declaration'] = { fg = c.orange },
-    ['@lsp.mod.declaration'] = { fg = c.orange },
-    ['@lsp.typemod.macro.globalScope.c'] = { fg = c.teal },
     ['@lsp.typemod.class.declaration'] = { fg = c.blue },
+    ['@lsp.typemod.function.declaration'] = { fg = c.pink },
+    ['@lsp.typemod.macro.globalScope.c'] = { fg = c.teal },
+    ['@lsp.typemod.parameter.declaration'] = { fg = c.orange },
+    ['@lsp.typemod.variable.global'] = { fg = c.blue_1 },
+
 
     -- Nvim Tree
     NvimTreeFolderIcon = { fg = c.teal_1 },
