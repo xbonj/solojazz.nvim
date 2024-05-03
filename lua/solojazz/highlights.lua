@@ -216,8 +216,8 @@ function M.setup()
     LspCodeLens = { bg = c.white_2 },
 
     -- Indentblankline
-    IblChar = { fg = c.grey },
-    IblScope = { bg = c.azure },
+    IblIndent = { fg = c.slate },
+    IblScope = { fg = c.blue_1 },
 
     -- Lazy
     LazyH1 = { fg = c.white, bg = c.teal_1, bold = true },
