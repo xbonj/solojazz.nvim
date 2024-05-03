@@ -38,11 +38,11 @@ solojazz.terminal = {
   c = { fg = c.purple, bg = c.white_2 },
 }
 
--- solojazz.inactive = {
---   a = { fg = c.white, bg = c., gui = 'bold' },
---   b = { fg = c.white, bg = c.white },
---   c = { fg = c.white, bg = c.white },
--- }
+solojazz.inactive = {
+  a = { fg = c.teal_1, bg = c.white_1, gui = 'bold' },
+  b = { fg = c.teal_1, bg = c.white_1 },
+  c = { fg = c.teal_1, bg = c.white_1 },
+}
 
 for _, mode in pairs(solojazz) do
   mode.a.gui = 'bold'
