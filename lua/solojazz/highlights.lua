@@ -295,22 +295,78 @@ function M.setup()
     NeogitChangeBothModified = { fg = c.pink, italic = true },
     NeogitChangeCopied = { fg = c.blue_1, italic = true },
     NeogitChangeDeleted = { fg = c.red, italic = true },
-    NeogitChangeModified = { fg = c.orange, italic = true },
+    NeogitChangeModified = { fg = c.purple, bold = true },
     NeogitChangeNewFile = { fg = c.purple, italic = true },
     NeogitChangeRenamed = { fg = c.pink, italic = true },
     NeogitChangeUpdated = { fg = c.green, italic = true },
     NeogitCommitViewHeader = { fg = c.white, bg = c.teal_1, bold = true },
-    NeogitDiffAdd = { link = 'diffAdded' },
+    NeogitCursorLine = { link = 'CursorLine' },
+    NeogitDiffAdd = { fg = c.black, bg = c.diff_added_highlight },
     NeogitDiffAddHighlight = { link = 'diffAdded' },
-    NeogitDiffDelete = { link = 'diffDelete' },
+    NeogitDiffContext = { fg = c.slate, bg = c.white },
+    NeogitDiffContextHighlight = { fg = c.purple, bg = c.white },
+    NeogitDiffDelete = { fg = c.black, bg = c.diff_removed_highlight },
     NeogitDiffDeleteHighlight = { link = 'diffDelete' },
     NeogitDiffHeader = { fg = c.blue_1, bold = true },
     NeogitDiffHeaderHighlight = { fg = c.blue_1, bold = true },
     NeogitFilePath = { fg = c.blue_1, italic = true },
-    NeogitHunkHeader = { fg = c.teal_1, bg = c.azure, bold = true },
-    NeogitHunkHeaderHighlight = { fg = c.white, bg = c.teal_1, bold = true },
-    NeogitSectionHeader = { fg = c.teal_1, bold = true },
+    NeogitHunkHeader = { fg = c.black, bg = c.white_1 },
+    NeogitHunkHeaderHighlight = { fg = c.purple, bg = c.lavender },
+    NeogitSectionHeader = { fg = c.teal, bold = true },
+    gitcommitBranch = { fg = c.orange },
+    gitcommitDiscardedFile = { fg = c.blue_1 },
+    gitcommitDiscardedType = { fg = c.purple, bold = true },
+    gitcommitSelectedFile = { fg = c.blue_1 },
+    gitcommitSelectedType = { fg = c.purple, bold = true },
+    gitcommitSummary = { fg = c.blue },
+    gitcommitUntrackedFile = { fg = c.blue_1 },
   }
+
+  local kinds = {
+    Array = '@punctuation.bracket',
+    Boolean = '@boolean',
+    Class = '@type',
+    Color = 'Special',
+    Constant = '@constant',
+    Constructor = '@constructor',
+    Enum = '@lsp.type.enum',
+    EnumMember = '@lsp.type.enumMember',
+    Event = 'Special',
+    Field = '@field',
+    File = 'Normal',
+    Folder = 'Directory',
+    Function = '@function',
+    Interface = '@lsp.type.interface',
+    Key = '@field',
+    Keyword = '@lsp.type.keyword',
+    Method = '@method',
+    Module = '@namespace',
+    Namespace = '@namespace',
+    Null = '@constant.builtin',
+    Number = '@number',
+    Object = '@constant',
+    Operator = '@operator',
+    Package = '@namespace',
+    Property = '@property',
+    Reference = '@text.reference',
+    Snippet = 'healthSuccess',
+    String = '@string',
+    Struct = '@lsp.type.struct',
+    Unit = '@lsp.type.struct',
+    Text = '@text',
+    TypeParameter = '@lsp.type.typeParameter',
+    Variable = '@function.call',
+    Value = '@string'
+  }
+
+  local kind_groups = { 'CmpItemKind%s' }
+  for kind, link in pairs(kinds) do
+    local base = 'LspKind' .. kind
+    highlights[base] = { link = link }
+    for _, plugin in pairs(kind_groups) do
+      highlights[plugin:format(kind)] = { link = base }
+    end
+  end
 
   -- Terminal colors
   vim.g.terminal_color_0 = c.black
