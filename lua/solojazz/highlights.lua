@@ -194,8 +194,8 @@ function M.setup()
 
     -- Cmp
     CmpItemAbbr = { fg = c.purple },
-    CmpItemAbbrMatch = { fg = c.teal_1 },
-    CmpItemAbbrMatchFuzzy = { fg = c.teal_1 },
+    CmpItemAbbrMatch = { fg = c.blue },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue },
     CmpItemKind = { fg = c.pink },
     -- CmpItemAbbrMatch = { fg = c.pink },
     -- CmpItemAbbrMatchFuzzy = { fg = c.pink },
