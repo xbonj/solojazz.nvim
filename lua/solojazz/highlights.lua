@@ -33,7 +33,7 @@ function M.setup()
     TermCursor = { fg = c.white, bg = c.teal_1 },
     TermCursorNC = { fg = c.none, bg = c.none },
     ErrorMsg = { fg = c.red, bold = true },
-    WinSeparator = { fg = c.teal_1 },
+    WinSeparator = { fg = c.slate },
     FloatBorder = { fg = c.teal_1 },
     Folded = { bg = c.lavender },
     FoldColumn = { bg = c.white },
@@ -113,6 +113,9 @@ function M.setup()
 
     helpSectionDelim = { bold = true },
 
+    -- Man
+    manReference = { fg = c.blue_1, underline = true },
+
     -- Treesitter
     --['@constant'] = { fg = c.orange },
     --['@parameter'] = { fg = c.orange },
@@ -141,6 +144,7 @@ function M.setup()
     ['@variable.builtin'] = { fg = c.pink },
 
     -- Markdown
+    ['@markup'] = { fg = c.teal },
     ['@markup.heading.1.markdown'] = { fg = c.teal, bold = true },
     ['@markup.heading.1.marker.markdown'] = { fg = c.teal, bold = true },
     ['@markup.heading.1.vimdoc'] = { fg = c.teal_1, bold = true },
@@ -329,7 +333,7 @@ function M.setup()
   -- Apply cursor highlights
   vim.cmd([[set guicursor=n-v-c:block-Cursor,i-ci-ve:ver100-Cursor,r-cr:hor20,o:hor50-Cursor,sm:block-Cursor]])
 
-  return highligths
+  return highlights
 end
 
 return M
