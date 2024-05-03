@@ -267,6 +267,23 @@ function M.setup()
     IlluminatedWordWrite = { bg = c.lavender },
 
     -- Neorg
+    ['@neorg.headings.1.title.norg'] = { fg = c.teal, bold = true },
+    ['@neorg.headings.1.prefix.norg'] = { fg = c.teal, bold = true },
+    ['@neorg.headings.2.title.norg'] = { fg = c.blue, bold = true },
+    ['@neorg.headings.2.prefix.norg'] = { fg = c.blue, bold = true },
+    ['@neorg.headings.3.title.norg'] = { fg = c.pink, bold = true },
+    ['@neorg.headings.3.prefix.norg'] = { fg = c.pink, bold = true },
+    ['@neorg.headings.4.title.norg'] = { fg = c.violet, bold = true },
+    ['@neorg.headings.4.prefix.norg'] = { fg = c.violet, bold = true },
+    ['@neorg.headings.5.title.norg'] = { fg = c.red, bold = true },
+    ['@neorg.headings.5.prefix.norg'] = { fg = c.red, bold = true },
+    ['@neorg.headings.6.title.norg'] = { fg = c.orange, bold = true },
+    ['@neorg.headings.6.prefix.norg'] = { fg = c.orange, bold = true },
+    ['@neorg.headings.7.title.norg'] = { fg = c.purple_1, bold = true },
+    ['@neorg.headings.7.prefix.norg'] = { fg = c.purple_1, bold = true },
+    ['@neorg.headings.8.title.norg'] = { fg = c.black, bold = true },
+    ['@neorg.headings.8.prefix.norg'] = { fg = c.black, bold = true },
+    ['@neorg.links.description.norg'] = { fg = c.blue_1, underline = true },
 
     -- Neogit
     NeogitBranch = { fg = c.blue_1, bold = true },
