@@ -56,11 +56,10 @@ function M.setup()
     NormalFloat = { bg = c.white_2 },
     --NormalNC
     Pmenu = { fg = c.teal_1, bg = c.white_1 },
-    --PmenuSel = { fg = c.white_2, bg = c.teal_1 },
-    PmenuSel = { bg = c.azure },
-    PmenuSbar = { fg = c.teal_1, bg = c.white_2 },
+    PmenuSel = { bg = c.lavender },
+    PmenuSbar = { fg = c.teal_1, bg = c.white_1 },
     PmenuThumb = { fg = c.teal_1, bg = c.teal_1 },
-    --Question
+    Question = { fg = c.teal_1, bold = true },
     --QuickFixLine
     Search = { fg = c.purple, bg = c.rose, bold = true },
     SpecialKey = { fg = c.pink },
@@ -96,9 +95,9 @@ function M.setup()
     Identifier = { fg = c.teal },
     Constant = { fg = c.orange },
     Function = { fg = c.pink },
-    Statement = { fg = c.teal, bold = true },
+    Statement = { fg = c.teal },
 
-    --Conditional = { fg = c.blue_1, bold = true },
+    -- Conditional = { fg = c.blue_1, bold = true },
     Conditional = { fg = c.teal, bold = true },
     Repeat = { fg = c.teal, bold = true },
     Label = { fg = c.teal },
