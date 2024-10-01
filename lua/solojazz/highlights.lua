@@ -202,6 +202,12 @@ function M.setup()
     DiagnosticUnderlineInfo = { fg = c.teal, underline = true }, -- and this is too
     DiagnosticUnderlineHint = { fg = c.blue_1, underline = true },
 
+    -- Todo Comments
+    TodoBgNOTE = { fg = c.white, bg = c.blue_1, bold = true },
+    TodoBgTODO = { fg = c.white, bg = c.teal, bold = true },
+    TodoBgHACK = { fg = c.white, bg = c.orange, bold = true },
+    TodoBgWARN = { fg = c.white, bg = c.orange, bold = true },
+
     -- Cmp
     CmpItemAbbr = { fg = c.purple },
     CmpItemAbbrMatch = { fg = c.blue },
